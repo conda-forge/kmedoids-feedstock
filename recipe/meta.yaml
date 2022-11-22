@@ -9,7 +9,7 @@ source:
   sha256: d334848ecc0d4b17c0e041b975f29b1963cd64e7c3743d9b9ec157ae5780e2c2
 
 build:
-  number: 0
+  number: 1
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
