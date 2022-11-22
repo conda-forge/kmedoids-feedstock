@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "1.0.6" %}
 
 package:
   name: kmedoids
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/kno10/python-kmedoids/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d334848ecc0d4b17c0e041b975f29b1963cd64e7c3743d9b9ec157ae5780e2c2
+  sha256: ec61af7c649ed1088f492da8c6b9f8ea8296d06079dc8b5589893550e3e09a57
 
 build:
   number: 0
@@ -44,12 +44,8 @@ test:
 
 about:
   home: https://github.com/kno10/python-kmedoids
-  summary: 'k-Medoids Clustering in Python with FasterPAM'
-  description:
-    This python package implements k-medoids clustering with PAM and
-    variants of clustering by direct optimization of the (Medoid) Silhouette.
-    It can be used with arbitrary dissimilarites, as it only requires
-    a dissimilarity matrix as input. A sklearn compatible API is included.
+  summary: k-Medoids Clustering in Python with FasterPAM
+  description: This python package implements k-medoids clustering with PAM and variants of clustering by direct optimization of the (Medoid) Silhouette. It can be used with arbitrary dissimilarites, as it only requires a dissimilarity matrix as input. A sklearn compatible API is included.
   license: GPL-3.0-or-later
   license_family: GPL
   license_file:
