@@ -1,4 +1,4 @@
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: kmedoids
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/kno10/python-kmedoids/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 9157599f87df901a3bbb4358f15e538b40b52c3f53f87de388de1773f52b6fa7
+  sha256: 4389d5ca9961cc6f2d2fcc154653813a35719e90c3b337a8d2b4dc152646d092
 
 build:
   number: 1
