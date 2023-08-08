@@ -27,6 +27,7 @@ requirements:
     - python
     - pip
     - numpy
+    - maturin
   run:
     - python
     - numpy
