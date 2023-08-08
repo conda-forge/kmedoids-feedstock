@@ -9,7 +9,7 @@ source:
   sha256: 4389d5ca9961cc6f2d2fcc154653813a35719e90c3b337a8d2b4dc152646d092
 
 build:
-  number: 1
+  number: 2
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -17,14 +17,17 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }} # used by Rust
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]  
+    - {{ compiler('c') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
+    - maturin
   host:
     - python
     - pip
-    - maturin
     - numpy
+    - maturin
   run:
     - python
     - numpy
