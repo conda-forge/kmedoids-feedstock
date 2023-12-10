@@ -9,7 +9,7 @@ source:
   sha256: 1a1376a8cdaffab9eeeb396faf387eac4339014263056b04a3cec1d94be4df3d
 
 build:
-  number: 3
+  number: 0
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -50,7 +50,9 @@ about:
   summary: 'k-Medoids Clustering in Python with FasterPAM'
   description:
     This python package implements k-medoids clustering with PAM and
-    variants of clustering by direct optimization of the (Medoid) Silhouette.
+    variants of clustering by direct optimization of the (Medoid) Silhouette,
+    including the DynMSC variant that automatically chooses the number
+    of clusters (based on the optimum medoid silhouette).
     It can be used with arbitrary dissimilarites, as it only requires
     a dissimilarity matrix as input. A sklearn compatible API is included.
   license: GPL-3.0-or-later
