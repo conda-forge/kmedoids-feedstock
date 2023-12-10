@@ -13,7 +13,7 @@ Development: https://github.com/kno10/python-kmedoids
 
 Documentation: https://python-kmedoids.readthedocs.io/
 
-This python package implements k-medoids clustering with PAM and variants of clustering by direct optimization of the (Medoid) Silhouette. It can be used with arbitrary dissimilarites, as it only requires a dissimilarity matrix as input. A sklearn compatible API is included.
+This python package implements k-medoids clustering with PAM and variants of clustering by direct optimization of the (Medoid) Silhouette, including the DynMSC variant that automatically chooses the number of clusters (based on the optimum medoid silhouette). It can be used with arbitrary dissimilarites, as it only requires a dissimilarity matrix as input. A sklearn compatible API is included.
 
 Current build status
 ====================
@@ -274,7 +274,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
