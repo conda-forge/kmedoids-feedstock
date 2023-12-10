@@ -323,5 +323,5 @@ Feedstock Maintainers
 =====================
 
 * [@kno10](https://github.com/kno10/)
-* [@lale1009](https://github.com/lale1009/)
+* [@larslenssen](https://github.com/larslenssen/)
 
