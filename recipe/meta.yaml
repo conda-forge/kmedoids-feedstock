@@ -9,7 +9,7 @@ source:
   sha256: 93a85856e0562288b9d0ee36384c26ca585fe54add93fc31deec23571d00624d
 
 build:
-  number: 0
+  number: 1
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]  
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - maturin
