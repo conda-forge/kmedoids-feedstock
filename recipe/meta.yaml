@@ -9,7 +9,7 @@ source:
   sha256: db6ea3145fdb933d6872700957d600cd0949e1cd120e073aff26ad2bb736f12b
 
 build:
-  number: 0
+  number: 1
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 # for python 3.13 while PyO3 is not yet updated
