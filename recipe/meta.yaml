@@ -30,7 +30,7 @@ requirements:
     - maturin
   run:
     - python
-    - numpy
+    - numpy < 2 # https://github.com/PyO3/rust-numpy/issues/409
 
 test:
   imports:
