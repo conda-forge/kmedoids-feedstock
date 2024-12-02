@@ -1,4 +1,4 @@
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: kmedoids
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/kno10/python-kmedoids/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: db6ea3145fdb933d6872700957d600cd0949e1cd120e073aff26ad2bb736f12b
+  sha256: 701e8318bdb79d481395ffd80218ef7cb49cde0bd583ca93ffee2de3f4668449
 
 build:
-  number: 2
+  number: 0
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 # for python 3.13 while PyO3 is not yet updated
@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]  
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('rust') }}
@@ -32,7 +32,7 @@ requirements:
     - maturin
   run:
     - python
-    - numpy <2 # https://github.com/PyO3/rust-numpy/issues/409
+    - numpy
 
 test:
   imports:
