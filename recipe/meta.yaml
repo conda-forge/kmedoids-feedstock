@@ -1,4 +1,4 @@
-{% set version = "0.5.3.1" %}
+{% set version = "0.5.4" %}
 
 package:
   name: kmedoids
@@ -6,13 +6,12 @@ package:
 
 source:
   url: https://github.com/kno10/python-kmedoids/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 23bb6631d2267f9b03e8d57e9713b31894668b142b9ef74e73786e13277deb16
+  sha256: d2d86f795043afe4ba09fb65a57e9e74d2d0f29e2ccb8fbe16be6f3ffb58c1e5
 
 build:
   number: 0
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
-    - export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 # for python 3.13 while PyO3 is not yet updated
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
