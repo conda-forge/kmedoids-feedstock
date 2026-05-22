@@ -1,4 +1,4 @@
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: kmedoids
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/kno10/python-kmedoids/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d2d86f795043afe4ba09fb65a57e9e74d2d0f29e2ccb8fbe16be6f3ffb58c1e5
+  sha256: 5edad4cb0f43c7372aeaa84e7294283e8db6e2fff97df6b2d7133e879b6c075f
 
 build:
-  number: 1
+  number: 0
   script:
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
